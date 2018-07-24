@@ -12,7 +12,7 @@ const styles = {
     padding: 20,
     marginTop: 10,
     marginBottom: 10,
-    height: 500,
+    height: 700,
   }
 }
 
@@ -26,7 +26,6 @@ export default ({
   category,
   memes,
   meme: {
-    id,
     title = 'Welcome!',
     image = 'https://www.therideronline.com/wp-content/uploads/2017/01/memes.jpg',
     description = 'Select a meme from the list on the left.',
@@ -60,7 +59,7 @@ export default ({
         <Typography variant="display1">
           {title}
         </Typography>
-          <img src={image} style={{marginTop: 25, maxWidth: '400px'}}></img>
+          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: '400px'}}></img>
         <Typography variant="subheading" style={{marginTop: 25}}>
           {description}
         </Typography>

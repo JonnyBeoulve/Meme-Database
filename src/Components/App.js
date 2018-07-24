@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react';
 import CategoryBar from './Layouts/CategoryBar';
 
 import Header from './Layouts/Header';
-import Memes from './Memes';
+import Memes from './Memes/Memes';
 import { categories, memes } from '../store.js';
 
 /*======================================================================
 // This container houses the state of the program along with top
 // level component render and handler functions.
 ======================================================================*/
-export default class extends Component {
+class App extends Component {
   state = {
     memes,
     meme: {}
@@ -67,3 +67,5 @@ export default class extends Component {
     )
   }
 }
+
+export default App;
