@@ -59,12 +59,21 @@ export default ({
         <Typography variant="display1">
           {title}
         </Typography>
-          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: '400px'}}></img>
-        <Typography variant="subheading" style={{marginTop: 25}}>
+          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: 'auto', maxHeight: '400px'}}>
+          </img>
+        <Typography 
+          variant="subheading" 
+          style={{marginTop: 25}}>
           {description}
         </Typography>
-        <Button variant="raised" color="secondary" style={{marginTop: 25}}>
-          <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
+        <Button 
+          variant="raised" 
+          color="secondary" 
+          style={{marginTop: 25}}
+        >
+          <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>
+            Read More
+          </a>
         </Button>
       </Paper>
     </Grid>

@@ -10,25 +10,32 @@ import { categories, memes } from '../store.js';
 // level component render and handler functions.
 ======================================================================*/
 class App extends Component {
-  state = {
-    memes,
-    meme: {}
+  /*========================================================================
+  // Store the state of all memes and the currently selected meme, with
+  // data derived from the store.
+  ========================================================================*/
+    constructor() {
+      super();
+      this.state = {
+        memes,
+        meme: {}
+      };
   }
 
   /*======================================================================
   // This will create an array of memes to be displayed on the left
-  // pane.
+  // panel.
   ======================================================================*/
-  getMemesByCategory() {
+  getMemesByCategory = () => {
     return Object.entries(
       this.state.memes.reduce((memes, meme) => {
-        const { categories } = meme
+        const { categories } = meme;
 
         memes[categories] = memes[categories]
           ? [...memes[categories], meme]
-          : [meme]
+          : [meme];
 
-        return memes
+        return memes;
       }, {})
     )
   }
@@ -36,16 +43,17 @@ class App extends Component {
   /*======================================================================
   // Upon clicking a category, alter the state.
   ======================================================================*/
-  handleCategorySelected = category => {
+  handleCategorySelected = (category) => {
     this.setState({
       category
     })
   }
 
   /*======================================================================
-  // Upon clicking a meme, alter state.
+  // Upon clicking a meme, alter state by setting meme to the meme with
+  // a matching ID.
   ======================================================================*/
-  handleMemeSelected = id => {
+  handleMemeSelected = (id) => {
     this.setState(({ memes }) => ({
       meme: memes.find(ex => ex.id === id)
     }))
@@ -61,8 +69,17 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <Memes meme={meme} category={category} memes={memes} onSelect={this.handleMemeSelected} />
-        <CategoryBar category={category} categories={categories} onSelect={this.handleCategorySelected} />
+        <Memes 
+          meme={meme} 
+          category={category} 
+          memes={memes} 
+          onSelect={this.handleMemeSelected} 
+        />
+        <CategoryBar 
+          category={category} 
+          categories={categories} 
+          onSelect={this.handleCategorySelected} 
+        />
       </Fragment>
     )
   }
