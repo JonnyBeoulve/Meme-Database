@@ -12,7 +12,7 @@ const styles = {
     padding: 20,
     marginTop: 10,
     marginBottom: 10,
-    height: 700,
+    height: '75vh',
   }
 }
 
