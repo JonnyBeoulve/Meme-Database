@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Header from '../../components/Layout/Header/Header';
+import Footer from '../../components/Layout/Footer/Footer';
 import CategoryBar from '../../components/Layout/CategoryBar/CategoryBar';
 import Memes from '../../components/Memes/Memes';
 import { categories, memes } from '../../store/store.js';
@@ -50,7 +51,7 @@ class App extends Component {
     let searchString = e.target.value;
     searchString = this.handleUpperCaseString(searchString);
     
-    const matchedMeme = this.state.memes.find(ex => ex.title === searchString);
+    const matchedMeme = this.state.memes.find(currentMeme => currentMeme.title === searchString);
     if (matchedMeme) {
       this.setState({
         meme: matchedMeme
@@ -82,7 +83,7 @@ class App extends Component {
   ======================================================================*/
   handleMemeSelected = (id) => {
     this.setState(({ memes }) => ({
-      meme: memes.find(ex => ex.id === id)
+      meme: memes.find(currentMeme => currentMeme.id === id)
     }))
   }
 
@@ -109,6 +110,7 @@ class App extends Component {
           categories={categories} 
           onSelect={this.handleCategorySelected} 
         />
+        <Footer />
       </Fragment>
     )
   }

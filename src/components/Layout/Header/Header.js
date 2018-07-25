@@ -4,8 +4,7 @@ import {
   TextField, 
   Toolbar, 
   Typography, 
-  withStyles 
-} from 'material-ui';
+  withStyles } from 'material-ui';
 
 /*======================================================================
 // Header styling.
@@ -48,7 +47,7 @@ function Header(props) {
     <AppBar color="secondary" position="static">
       <Toolbar>
         <Typography 
-          variant="headline" 
+          variant="display1" 
           color="inherit" 
           className={classes.flex}
         >

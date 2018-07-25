@@ -1,5 +1,9 @@
 import React, { Fragment } from 'react';
-import { Grid, Paper, Typography, List } from 'material-ui';
+import { 
+  Grid, 
+  Paper, 
+  Typography, 
+  List } from 'material-ui';
 import { ListItem, ListItemText } from 'material-ui/List';
 import Button from 'material-ui/Button';
 
@@ -13,7 +17,6 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     height: '700px',
-    fontSize: '0.8em'
   },
   MemeListPaper: {
     overflowY: 'auto',
@@ -21,6 +24,9 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     height: '700px',
+  },
+  memeListItemText: {
+    fontFamily: 'Roboto',
     fontSize: '0.8em'
   }
 }
@@ -48,13 +54,13 @@ export default ({
         {memes.map(([group, memes]) =>
           !category || category === group
             ? <Fragment key={group}>
-                <Typography variant="headline" style={{ textTransform: 'capitalize' }}>
+                <Typography variant="subheading" style={{ textTransform: 'capitalize' }}>
                   {group}
                 </Typography>
                 <List component="ul">
                   {memes.map(({ id, title }) =>
                     <ListItem key={id} button onClick={() => onSelect(id)}>
-                      <ListItemText primary={title} />
+                      <ListItemText disableTypography primary={title} style={styles.memeListItemText} />
                     </ListItem>
                   )}
                 </List>
