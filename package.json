@@ -1,7 +1,7 @@
 {
   "name": "meme-database",
-  "version": "0.2.5",
-  "description": "This React project allows a user to browse and edit a database of categorized memes that uses Material UI to deliver a Google-esque presentation.",
+  "version": "0.2.6",
+  "description": "This React project allows a user to browse a database of categorized memes with a Material UI front-end that delivers a Google-esque presentation.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

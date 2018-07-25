@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import CategoryBar from './Layouts/CategoryBar';
 
-import Header from './Layouts/Header';
-import Memes from './Memes/Memes';
-import { categories, memes } from '../store.js';
+import Header from '../../components/Layout/Header/Header';
+import CategoryBar from '../../components/Layout/CategoryBar/CategoryBar';
+import Memes from '../../components/Memes/Memes';
+import { categories, memes } from '../../store/store.js';
 
 /*======================================================================
 // This container houses the state of the program along with top

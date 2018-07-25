@@ -12,7 +12,7 @@ const styles = {
     padding: 20,
     marginTop: 10,
     marginBottom: 10,
-    height: '75vh',
+    height: '700px'
   }
 }
 
@@ -28,12 +28,31 @@ export default ({
   meme: {
     title = 'Welcome!',
     image = 'https://www.therideronline.com/wp-content/uploads/2017/01/memes.jpg',
-    description = 'Select a meme from the list on the left.',
+    description = 'Select a meme from the list.',
     link = ''
   },
   onSelect,
  }) =>
   <Grid container>
+    <Grid item sm>
+      <Paper style={styles.Paper}>
+        <Typography variant="display1">
+          {title}
+        </Typography>
+          <img src={image} alt="Meme" style={{marginTop: 25, width: '400px'}}>
+          </img>
+        <Typography 
+          variant="subheading" 
+          style={{marginTop: 25}}>
+          {description}
+        </Typography>
+        {(link)
+          ? <Button variant="raised" color="secondary" style={{marginTop: 25}}>
+            <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
+          </Button>
+          : null}
+      </Paper>
+    </Grid>
     <Grid item sm>
       <Paper style={styles.Paper}>
         {memes.map(([group, memes]) =>
@@ -52,25 +71,6 @@ export default ({
               </Fragment>
             : null
         )}
-      </Paper>
-    </Grid>
-    <Grid item sm>
-      <Paper style={styles.Paper}>
-        <Typography variant="display1">
-          {title}
-        </Typography>
-          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: 'auto', height: '400px'}}>
-          </img>
-        <Typography 
-          variant="subheading" 
-          style={{marginTop: 25}}>
-          {description}
-        </Typography>
-        {(link)
-          ? <Button variant="raised" color="secondary" style={{marginTop: 25}}>
-            <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
-          </Button>
-          : null}
       </Paper>
     </Grid>
   </Grid>

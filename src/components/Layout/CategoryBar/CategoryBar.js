@@ -38,7 +38,8 @@ export default ({ categories, category, onSelect }) => {
         onChange={indexSelect} 
         indicatorColor="secondary" 
         textColor="secondary" 
-        centered
+        scrollable
+        scrollButtons="on"
       >
       <Tab 
         label="All" />
