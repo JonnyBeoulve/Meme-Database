@@ -61,7 +61,7 @@ export const memes = [
   },
   {
     id: 'ugandan-knuckles',
-    title: 'Ugandan Knucles',
+    title: 'Ugandan Knuckles',
     image: 'https://i.kym-cdn.com/photos/images/newsfeed/001/329/453/ba0.jpg',
     description: 'Ugandan Knuckles is the nickname given to a depiction of the character Knuckles from the Sonic franchise created by YouTuber Gregzilla, which is often used as an avatar by players in the multiplayer game VRChat who repeat phrases like "do you know the way" and memes associated with the country Uganda, most notably the film Who Killed Captain Alex? and Zulul. The character is associated with the expression "do you know the way", which is typically spoken in a mock African accent and phonetically spelled as "do you know de wey." Along with the question in hand a VR user will start making "spitting" sounds, followed by a "mob like" mentality. Unsuspecting VRchat users fall victim to Ugandan Knuckles "promise" of showing "de wey". Only followed by a mass trolling.',
     link: 'https://knowyourmeme.com/memes/ugandan-knuckles',

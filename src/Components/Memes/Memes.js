@@ -7,12 +7,21 @@ import Button from 'material-ui/Button';
 // Styling for the layout.
 ======================================================================*/
 const styles = {
-  Paper: {
+  MemeInfoPaper: {
     overflowY: 'auto',
     padding: 20,
     marginTop: 10,
     marginBottom: 10,
-    height: '700px'
+    height: '700px',
+    fontSize: '0.8em'
+  },
+  MemeListPaper: {
+    overflowY: 'auto',
+    padding: 20,
+    marginTop: 10,
+    marginBottom: 10,
+    height: '700px',
+    fontSize: '0.8em'
   }
 }
 
@@ -34,27 +43,8 @@ export default ({
   onSelect,
  }) =>
   <Grid container>
-    <Grid item sm>
-      <Paper style={styles.Paper}>
-        <Typography variant="display1">
-          {title}
-        </Typography>
-          <img src={image} alt="Meme" style={{marginTop: 25, width: '400px'}}>
-          </img>
-        <Typography 
-          variant="subheading" 
-          style={{marginTop: 25}}>
-          {description}
-        </Typography>
-        {(link)
-          ? <Button variant="raised" color="secondary" style={{marginTop: 25}}>
-            <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
-          </Button>
-          : null}
-      </Paper>
-    </Grid>
-    <Grid item sm>
-      <Paper style={styles.Paper}>
+    <Grid item xs={4}>
+      <Paper style={styles.MemeListPaper}>
         {memes.map(([group, memes]) =>
           !category || category === group
             ? <Fragment key={group}>
@@ -71,6 +61,25 @@ export default ({
               </Fragment>
             : null
         )}
+      </Paper>
+    </Grid>
+    <Grid item xs={8}>
+      <Paper style={styles.MemeInfoPaper}>
+        <Typography variant="display1">
+          {title}
+        </Typography>
+          <img src={image} alt="Meme" style={{marginTop: 25, width: '70%'}}>
+          </img>
+        <Typography 
+          variant="subheading" 
+          style={{marginTop: 25}}>
+          {description}
+        </Typography>
+        {(link)
+          ? <Button variant="raised" color="secondary" style={{marginTop: 25}}>
+            <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
+          </Button>
+          : null}
       </Paper>
     </Grid>
   </Grid>

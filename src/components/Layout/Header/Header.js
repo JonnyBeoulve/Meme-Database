@@ -10,11 +10,33 @@ import {
 /*======================================================================
 // Header styling.
 ======================================================================*/
-const styles = {
+const styles = theme => ({
   flex: {
     flexGrow: 1,
-  }
-};
+  },
+  whiteInputFont: {
+    color: 'white',
+  },
+  bootstrapInput: {
+    borderRadius: 4,
+    backgroundColor: theme.palette.common.white,
+    border: '1px solid #fff',
+    fontSize: 16,
+    padding: '10px 12px',
+    width: 'calc(100% - 24px)',
+    transition: theme.transitions.create(['border-color', 'box-shadow']),
+    fontFamily: [
+      'Roboto',
+    ].join(','),
+    '&:focus': {
+      borderColor: '#fff',
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+    },
+  },
+  bootstrapFormLabel: {
+    fontSize: 18,
+  },
+});
 
 /*======================================================================
 // Render the header, which simply shows the name of the app and
@@ -25,14 +47,28 @@ function Header(props) {
   return (
     <AppBar color="secondary" position="static">
       <Toolbar>
-        <Typography variant="headline" color="inherit" className={classes.flex}>
+        <Typography 
+          variant="headline" 
+          color="inherit" 
+          className={classes.flex}
+        >
           Meme Database
         </Typography>
         <TextField
-          id="search"
-          label="Search"
-          type="search"
-          margin="normal"
+          defaultValue="Search"
+          id="bootstrap-input"
+          className={classes.searchField}
+          InputProps={{
+            disableUnderline: true,
+            classes: {
+              root: classes.bootstrapRoot,
+              input: classes.bootstrapInput,
+            },
+          }}
+          InputLabelProps={{
+            shrink: true,
+            className: classes.bootstrapFormLabel,
+          }}
           onChange={props.onSearch}
         />
       </Toolbar>
