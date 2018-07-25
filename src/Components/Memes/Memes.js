@@ -29,7 +29,7 @@ export default ({
     title = 'Welcome!',
     image = 'https://www.therideronline.com/wp-content/uploads/2017/01/memes.jpg',
     description = 'Select a meme from the list on the left.',
-    link = 'http://www.knowyourmeme.com'
+    link = ''
   },
   onSelect,
  }) =>
@@ -66,15 +66,11 @@ export default ({
           style={{marginTop: 25}}>
           {description}
         </Typography>
-        <Button 
-          variant="raised" 
-          color="secondary" 
-          style={{marginTop: 25}}
-        >
-          <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>
-            Read More
-          </a>
-        </Button>
+        {(link)
+          ? <Button variant="raised" color="secondary" style={{marginTop: 25}}>
+            <a href={link} target="_blank" alt="Meme" style={{textDecoration: 'none', color: '#fff'}}>Read More</a>
+          </Button>
+          : null}
       </Paper>
     </Grid>
   </Grid>

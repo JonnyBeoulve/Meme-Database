@@ -18,7 +18,7 @@ class App extends Component {
       super();
       this.state = {
         memes,
-        meme: {}
+        meme: {},
       };
   }
 
@@ -38,6 +38,20 @@ class App extends Component {
         return memes;
       }, {})
     )
+  }
+  
+  /*======================================================================
+  // Upon typing into the search field, this will determine if the
+  // search string matches the name of a meme. If so, it will display
+  // the corresponding matched meme.
+  ======================================================================*/
+  handleSearch = (e) => {
+    const matchedMeme = this.state.memes.find(ex => ex.title === e.target.value);
+    if (matchedMeme) {
+      this.setState({
+        meme: matchedMeme
+      })
+    }
   }
 
   /*======================================================================
@@ -60,7 +74,9 @@ class App extends Component {
   }
 
   /*======================================================================
-  // Render the top level components.
+  // Render the top level components, including a header, two-panel
+  // list of categories and meme information, as well as a category
+  // bar.
   ======================================================================*/
   render() {
     const memes = this.getMemesByCategory(),
@@ -68,7 +84,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Header />
+        <Header onChangeSearch={this.handleSearchInput} onSearch={this.handleSearch} />
         <Memes 
           meme={meme} 
           category={category} 

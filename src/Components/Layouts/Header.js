@@ -1,15 +1,15 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, withStyles } from 'material-ui';
+import { AppBar, TextField, Toolbar, Typography, withStyles } from 'material-ui';
 
+/*======================================================================
+// Header styling.
+======================================================================*/
 const styles = {
   flex: {
     flexGrow: 1,
   },
-  smallerFont: {
-    fontSize: '0.8em',
-  },
-  linkColor: {
-    color: '#fff'
+  whiteFont: {
+    color: '#fff',
   }
 };
 
@@ -25,9 +25,14 @@ function Header(props) {
         <Typography variant="headline" color="inherit" className={classes.flex}>
           Meme Database
         </Typography>
-        <Typography variant="title" color="inherit" className={classes.smallerFont}>
-          Made by <a href="http://www.JonathanLeack.com" target="_blank" rel="noopener noreferrer" className={classes.linkColor}>Jonathan Leack</a> using React and Material UI
-        </Typography>
+        <TextField
+          id="search"
+          label="Search"
+          type="search"
+          margin="normal"
+          className={classes.whiteFont}
+          onChange={props.onSearch}
+        />
       </Toolbar>
     </AppBar>
   )
