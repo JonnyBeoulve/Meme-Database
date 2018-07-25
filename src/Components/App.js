@@ -43,15 +43,28 @@ class App extends Component {
   /*======================================================================
   // Upon typing into the search field, this will determine if the
   // search string matches the name of a meme. If so, it will display
-  // the corresponding matched meme.
+  // the corresponding matched meme. First, the string will be capitalized
+  // to provide the best matching possible.
   ======================================================================*/
   handleSearch = (e) => {
-    const matchedMeme = this.state.memes.find(ex => ex.title === e.target.value);
+    let searchString = e.target.value;
+    searchString = this.handleUpperCaseString(searchString);
+    
+    const matchedMeme = this.state.memes.find(ex => ex.title === searchString);
     if (matchedMeme) {
       this.setState({
         meme: matchedMeme
       })
     }
+  }
+
+  /*======================================================================
+  // Capitalize the first letter of each word in the search string.
+  ======================================================================*/
+  handleUpperCaseString = (str) => {
+    return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
   }
 
   /*======================================================================

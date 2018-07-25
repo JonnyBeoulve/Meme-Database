@@ -1,5 +1,11 @@
 import React from 'react';
-import { AppBar, TextField, Toolbar, Typography, withStyles } from 'material-ui';
+import { 
+  AppBar, 
+  TextField, 
+  Toolbar, 
+  Typography, 
+  withStyles 
+} from 'material-ui';
 
 /*======================================================================
 // Header styling.
@@ -7,9 +13,6 @@ import { AppBar, TextField, Toolbar, Typography, withStyles } from 'material-ui'
 const styles = {
   flex: {
     flexGrow: 1,
-  },
-  whiteFont: {
-    color: '#fff',
   }
 };
 
@@ -30,7 +33,6 @@ function Header(props) {
           label="Search"
           type="search"
           margin="normal"
-          className={classes.whiteFont}
           onChange={props.onSearch}
         />
       </Toolbar>

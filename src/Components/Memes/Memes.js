@@ -59,7 +59,7 @@ export default ({
         <Typography variant="display1">
           {title}
         </Typography>
-          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: 'auto', maxHeight: '400px'}}>
+          <img src={image} alt="Meme" style={{marginTop: 25, maxWidth: 'auto', height: '400px'}}>
           </img>
         <Typography 
           variant="subheading" 

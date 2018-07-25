@@ -12,6 +12,22 @@ export const memes = [
     categories: 'catchphrase'
   },
   {
+    id: 'first-world-problems',
+    title: 'First World Problems',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/006/236/1stWorld.jpg',
+    description: 'First World Problems, also known as "White Whine," are frustrations and complaints that are only experienced by privileged individuals in wealthy countries. It is typically used as a tongue-in-cheek comedic device to make light of trivial inconveniences.',
+    link: 'https://knowyourmeme.com/memes/first-world-problems',
+    categories: 'catchphrase'
+  },
+  {
+    id: 'half-life-3-confirmed',
+    title: 'Half Life 3 Confirmed',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/013/268/halflife.jpg',
+    description: 'Half-Life 3 Confirmed is a catchphrase associated with the rumored announcement of the fifth installment in the popular Half-Life franchise developed by Valve. Since the release of Half-Life 2: Episode 2 in October 2007, fans have long anticipated the next installment in the franchise, which over time lead to numerous intentionally fake theories that have little to nothing to do with the games, alongside various stories which claim the release of the game to be coincident with The Rapture.',
+    link: 'https://knowyourmeme.com/memes/half-life-3-confirmed',
+    categories: 'catchphrase'
+  },
+  {
     id: 'yo-dawg',
     title: 'Yo Dawg',
     image: 'http://i0.kym-cdn.com/entries/icons/original/000/000/048/800px-Sup_dawg.jpg',
@@ -20,12 +36,12 @@ export const memes = [
     categories: 'catchphrase'
   },
   {
-    id: 'first-world-problems',
-    title: 'First World Problems',
-    image: 'http://i0.kym-cdn.com/entries/icons/original/000/006/236/1stWorld.jpg',
-    description: 'First World Problems, also known as “White Whine,” are frustrations and complaints that are only experienced by privileged individuals in wealthy countries. It is typically used as a tongue-in-cheek comedic device to make light of trivial inconveniences.',
-    link: 'http://knowyourmeme.com/memes/first-world-problems',
-    categories: 'catchphrase'
+    id: 'bad-luck-brian',
+    title: 'Bad Luck Brian',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/009/515/BadLuckBryan.jpg',
+    description: 'Bad Luck Brian is an advice animal-style image macro series featuring a photo of a blonde teenage boy wearing a plaid sweater vest and braces, accompanied by captions that describe a variety of embarrassing and tragic occurrences.',
+    link: 'https://knowyourmeme.com/memes/bad-luck-brian',
+    categories: 'character'
   },
   {
     id: 'slender-man',
@@ -44,6 +60,22 @@ export const memes = [
     categories: 'character'
   },
   {
+    id: 'ugandan-knuckles',
+    title: 'Ugandan Knucles',
+    image: 'https://i.kym-cdn.com/photos/images/newsfeed/001/329/453/ba0.jpg',
+    description: 'Ugandan Knuckles is the nickname given to a depiction of the character Knuckles from the Sonic franchise created by YouTuber Gregzilla, which is often used as an avatar by players in the multiplayer game VRChat who repeat phrases like "do you know the way" and memes associated with the country Uganda, most notably the film Who Killed Captain Alex? and Zulul. The character is associated with the expression "do you know the way", which is typically spoken in a mock African accent and phonetically spelled as "do you know de wey." Along with the question in hand a VR user will start making "spitting" sounds, followed by a "mob like" mentality. Unsuspecting VRchat users fall victim to Ugandan Knuckles "promise" of showing "de wey". Only followed by a mass trolling.',
+    link: 'https://knowyourmeme.com/memes/ugandan-knuckles',
+    categories: 'character'
+  },
+  {
+    id: 'ancient-aliens',
+    title: 'Ancient Aliens',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/005/848/Aliens.jpg',
+    description: 'Ancient Aliens is a series of image macros based on History Channels TV series with the same name starring alien expert Giorgio A. Tsoukalos, who often tends to explain inexplicable phenomena as the direct result of aliens or extraterrestrials being on Earth. In a somewhat similar fashion to Bill O Reilly s You Cant Explain That series, the Ancient Aliens macros exaggerate Tsoukalos beliefs to such an extent that they become humourous.',
+    link: 'https://knowyourmeme.com/memes/ancient-aliens',
+    categories: 'parody'
+  },
+  {
     id: 'here-in-my-garage',
     title: 'Here In My Garage',
     image: 'http://i0.kym-cdn.com/entries/icons/original/000/018/427/tailopz.JPG',
@@ -53,9 +85,9 @@ export const memes = [
   },
   {
     id: 'g-i-joe-psa',
-    title: 'G.I. Joe PSA',
+    title: 'G I Joe PSA',
     image: 'http://i0.kym-cdn.com/entries/icons/original/000/000/114/GI_PSA.png',
-    description: 'G.I. Joe PSA Parodies are a series of 25 spoof public service announcement videos created by Chicago-based filmmmaker Eric Fensler and published by his production company, Fensler Films.[3] They spread primarily through eBaum’s World as embedded Quicktime videos.',
+    description: 'GI Joe PSA Parodies are a series of 25 spoof public service announcement videos created by Chicago-based filmmmaker Eric Fensler and published by his production company, Fensler Films.[3] They spread primarily through eBaum’s World as embedded Quicktime videos.',
     link: 'http://knowyourmeme.com/memes/gi-joe-psas',
     categories: 'parody'
   },
@@ -108,6 +140,14 @@ export const memes = [
     categories: 'popculture'
   },
   {
+    id: 'cool-story-bro',
+    title: 'Cool Story Bro',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/000/346/COOLSTORY.jpg',
+    description: '"Cool Story, Bro" is a catchphrase often seen in image macros as a sarcastic response on message boards or in comments to posts that are deemed boring, pointless or too long to read (TL;DR).',
+    link: 'https://knowyourmeme.com/memes/cool-story-bro',
+    categories: 'reaction'
+  },
+  {
     id: 'haters-gonna-hate',
     title: 'Haters Gonna Hate',
     image: 'http://i0.kym-cdn.com/entries/icons/original/000/001/945/haters.jpg',
@@ -130,6 +170,14 @@ export const memes = [
     description: 'The act of placing one’s face in one’s hands, or “facepalming” is a gesture of nonverbal-communication common among many cultures. The action conveys a message of dismay and is often a reaction toward someone’s momentary lapse of logic, judgement, or memory. This reaction may be directed toward another person or be self-deprecating.',
     link: 'http://knowyourmeme.com/memes/facepalm',
     categories: 'reaction'
+  },
+  {
+    id: 'dank-memes',
+    title: 'Dank Memes',
+    image: 'https://i.kym-cdn.com/entries/icons/mobile/000/016/958/Dankkkk.jpg',
+    description: '"Dank Memes" is an ironic expression used to describe online viral media and in-jokes that are intentionally bizarre or have exhausted their comedic value to the point of being trite or cliché. In this context, the word “dank,” originally coined as a term for high quality marijuana, is satirically used as a synonym for “cool.”',
+    link: 'https://knowyourmeme.com/memes/dank-memes',
+    categories: 'slang'
   },
   {
     id: 'rekt',
