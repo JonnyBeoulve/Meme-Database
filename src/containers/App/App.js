@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 
-import Header from '../../components/Layout/Header/Header';
-import Footer from '../../components/Layout/Footer/Footer';
-import CategoryBar from '../../components/Layout/CategoryBar/CategoryBar';
-import Memes from '../../components/Memes/Memes';
-import { categories, memes } from '../../store/store.js';
+import Header from "../../components/Layout/Header/Header";
+import Footer from "../../components/Layout/Footer/Footer";
+import CategoryBar from "../../components/Layout/CategoryBar/CategoryBar";
+import Memes from "../../components/Memes/Memes";
+import { categories, memes } from "../../store/store.js";
 
 /*======================================================================
 // This container houses the state of the program along with top
@@ -15,12 +15,12 @@ class App extends Component {
   // Store the state of all memes and the currently selected meme, with
   // data derived from the store.
   ========================================================================*/
-    constructor() {
-      super();
-      this.state = {
-        memes,
-        meme: {},
-      };
+  constructor() {
+    super();
+    this.state = {
+      memes,
+      meme: {}
+    };
   }
 
   /*======================================================================
@@ -38,54 +38,56 @@ class App extends Component {
 
         return memes;
       }, {})
-    )
-  }
-  
+    );
+  };
+
   /*======================================================================
   // Upon typing into the search field, this will determine if the
   // search string matches the name of a meme. If so, it will display
   // the corresponding matched meme. First, the string will be capitalized
   // to provide the best matching possible.
   ======================================================================*/
-  handleSearch = (e) => {
+  handleSearch = e => {
     let searchString = e.target.value;
     searchString = this.handleUpperCaseString(searchString);
-    
-    const matchedMeme = this.state.memes.find(currentMeme => currentMeme.title === searchString);
+
+    const matchedMeme = this.state.memes.find(
+      currentMeme => currentMeme.title === searchString
+    );
     if (matchedMeme) {
       this.setState({
         meme: matchedMeme
-      })
+      });
     }
-  }
+  };
 
   /*======================================================================
   // Capitalize the first letter of each word in the search string.
   ======================================================================*/
-  handleUpperCaseString = (str) => {
-    return str.replace(/\w\S*/g, function(txt){
+  handleUpperCaseString = str => {
+    return str.replace(/\w\S*/g, function(txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-  }
+    });
+  };
 
   /*======================================================================
   // Upon clicking a category, alter the state.
   ======================================================================*/
-  handleCategorySelected = (category) => {
+  handleCategorySelected = category => {
     this.setState({
       category
-    })
-  }
+    });
+  };
 
   /*======================================================================
   // Upon clicking a meme, alter state by setting meme to the meme with
   // a matching ID.
   ======================================================================*/
-  handleMemeSelected = (id) => {
+  handleMemeSelected = id => {
     this.setState(({ memes }) => ({
       meme: memes.find(currentMeme => currentMeme.id === id)
-    }))
-  }
+    }));
+  };
 
   /*======================================================================
   // Render the top level components, including a header, two-panel
@@ -94,25 +96,28 @@ class App extends Component {
   ======================================================================*/
   render() {
     const memes = this.getMemesByCategory(),
-      { category, meme } = this.state
+      { category, meme } = this.state;
 
     return (
       <Fragment>
-        <Header onChangeSearch={this.handleSearchInput} onSearch={this.handleSearch} />
-        <Memes 
-          meme={meme} 
-          category={category} 
-          memes={memes} 
-          onSelect={this.handleMemeSelected} 
+        <Header
+          onChangeSearch={this.handleSearchInput}
+          onSearch={this.handleSearch}
         />
-        <CategoryBar 
-          category={category} 
-          categories={categories} 
-          onSelect={this.handleCategorySelected} 
+        <Memes
+          meme={meme}
+          category={category}
+          memes={memes}
+          onSelect={this.handleMemeSelected}
+        />
+        <CategoryBar
+          category={category}
+          categories={categories}
+          onSelect={this.handleCategorySelected}
         />
         <Footer />
       </Fragment>
-    )
+    );
   }
 }
 
